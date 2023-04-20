@@ -13,6 +13,7 @@
     "dev": "tsc-watch --onSuccess \"node dist/index.js\""
   },
   "dependencies": {
+    "dotenv": "^16.0.3",
     "openai": "^3.2.1"
   },
   "type": "module"
