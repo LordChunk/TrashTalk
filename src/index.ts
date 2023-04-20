@@ -13,7 +13,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 const completion = await openai.createCompletion({
-  model: "gpt-3.5-turbo",
+  model: "text-davinci-003",
   prompt: "Give me backhanded compliments for people throwing rubbish in a bin.",
 });
 
