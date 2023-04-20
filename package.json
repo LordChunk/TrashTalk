@@ -1,0 +1,19 @@
+{
+  "name": "trash-talk",
+  "main": "src/index.ts",
+  "devDependencies": {
+    "@types/node": "^18.15.12",
+    "ts-node": "^10.9.1",
+    "tsc-watch": "^6.0.0",
+    "typescript": "^5.0.4"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc-watch --onSuccess \"node dist/index.js\""
+  },
+  "dependencies": {
+    "openai": "^3.2.1"
+  },
+  "type": "module"
+}
