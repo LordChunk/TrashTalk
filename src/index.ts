@@ -27,12 +27,19 @@ console.log(text);
 // Create client and load credentials from .json
 const client = new TextToSpeechClient();
 
+const dialects = [
+  "en-AU",
+  "en-IN",
+  "en-GB",
+  "en-US",
+];
+
 const [response] = await client.synthesizeSpeech({
   input: { text },
   voice: {
-    // Australian English
-    languageCode: "en-AU",
-    ssmlGender: "MALE",
+    // Pick a random dialect
+    languageCode: dialects[Math.floor(Math.random() * dialects.length)],
+    ssmlGender: "SSML_VOICE_GENDER_UNSPECIFIED"
   },
   audioConfig: {
     audioEncoding: "MP3",
