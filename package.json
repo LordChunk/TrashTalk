@@ -3,7 +3,6 @@
   "main": "src/index.ts",
   "devDependencies": {
     "@types/node": "^18.15.12",
-    "@types/play-sound": "^1.1.0",
     "ts-node": "^10.9.1",
     "tsc-watch": "^6.0.0",
     "typescript": "^5.0.4"
@@ -15,9 +14,9 @@
   },
   "dependencies": {
     "@google-cloud/text-to-speech": "^4.2.2",
+    "audic": "^3.0.1",
     "dotenv": "^16.0.3",
-    "openai": "^3.2.1",
-    "play-sound": "^1.1.5"
+    "openai": "^3.2.1"
   },
   "type": "module"
 }

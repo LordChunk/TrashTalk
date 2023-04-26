@@ -1,7 +1,7 @@
 import { Configuration, OpenAIApi } from "openai";
 import { TextToSpeechClient } from "@google-cloud/text-to-speech";
 import fs from "fs";
-import player from 'play-sound';
+import Audic from 'audic';
 
 import dotenv from "dotenv";
 dotenv.config();
@@ -42,8 +42,6 @@ const [response] = await client.synthesizeSpeech({
 // Write the binary audio content to a local file
 fs.writeFileSync("output.mp3", response.audioContent as string, "binary");
 
-player().play('output.mp3', (err) => {
-  if (err) {
-    console.log(err);
-  }
-});
+const audio = new Audic("output.mp3");
+
+await audio.play();
